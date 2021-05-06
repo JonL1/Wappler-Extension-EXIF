@@ -1,0 +1,22 @@
+[
+  {
+    type: 'Image',
+    module : 'getImageExif',
+    action : 'getImageExif',
+    groupTitle : 'Image Processor',
+    groupIcon : 'fa fa-lg fa-file-image comp-images',
+    title : 'Get Image EXIF @@var(name)@@',
+    icon : 'fa fa-lg fa-camera comp-images',
+    dataPickObject: true,
+    properties : [
+      {
+        group: 'Image Exif options',
+        variables: [
+          { name: 'name', optionName: 'name', title: 'Name', type: 'text', required: true, defaultValue: 'imageEXIF', help: 'This will be the name for the output key and the tag used in the expression builder'},
+          { name: 'path', optionName: 'path', title: 'Image Path', type: 'file', required: true, defaultValue: '', help: 'Path to the file', serverDataBindings: true},
+          { name: 'metadataOutput', optionName: 'output', title: 'Output', type: 'boolean', defaultValue: false }         
+        ]
+      }
+    ]
+  },
+]
